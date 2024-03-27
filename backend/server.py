@@ -37,7 +37,7 @@ def add_product():
 def get_image(filename):
     return send_from_directory('product-images', filename)
 
-@app.route('/products/<int:product_id>', methods=['POST'])
+@app.route('/products/<int:product_id>', methods=['PUT'])
 def update_product(product_id):
     product_details = request.json
     products = load_products()
